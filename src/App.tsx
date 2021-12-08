@@ -14,6 +14,10 @@ export default function App() {
             {item.trim()}
           </li>
         )}
+      />      
+      <List<number>
+        items={[1,2,3,4]} 
+        renderItem={item => <li key={item}>{item.toPrecision(3)}</li>}
       />
     </div>
   );
