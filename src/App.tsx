@@ -1,6 +1,7 @@
 import "./styles.css";
 import UserComponent from './components/UserComponent';
 import List from './components/List';
+import OptionalProps from './components/OptionalProps';
 export default function App() {
   return (
     <div className="App">
@@ -18,6 +19,12 @@ export default function App() {
       <List<number>
         items={[1,2,3,4]} 
         renderItem={item => <li key={item}>{item.toPrecision(3)}</li>}
+      />
+      <OptionalProps
+        prop1="text"
+        prop2={404}
+        myFunction={()=> {}}
+        prop3={true}
       />
     </div>
   );
